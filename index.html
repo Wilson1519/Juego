@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="estilos.css" />
-    <title>ADIVINA LA TECNOLOGÍA</title>
-  </head>
-  <body>
-    <h1>ADIVINA LA TECNOLOGÍA</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <!-- <link rel="stylesheet" href="all.min.css"> -->
+    <link rel="stylesheet" href="estilo.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicios de Operaciones Matematicas</h1>
+        <section class="container-operadores">
+            <button id="suma" onclick="btnSumar()">
+                <i class="fa-solid fa-plus"></i>
+            </button>
 
-    <div id="pantalla-inicial">
-      <p>¿A qué lenguaje o tecnología corresponde?</p>
-      <button class="btn" onclick="comenzarJuego()">COMENZAR A JUGAR</button>
-    </div>
+            <button id="resta" onclick="btnResta()">
+                <i class="fa-solid fa-minus"></i>
+            </button>
 
-    <div class="pantalla-juego" id="pantalla-juego">
-      <img src="img/ad.svg" alt="" id="imgBandera" />
-      <div class="opciones">
-        <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
-          <div class="letra" id="l0">A</div>
-          <div class="nombre" id="n0">OPCION A</div>
-        </div>
-        <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
-          <div class="letra" id="l1">B</div>
-          <div class="nombre" id="n1">OPCION B</div>
-        </div>
-        <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
-          <div class="letra" id="l2">C</div>
-          <div class="nombre" id="n2">OPCION C</div>
-        </div>
-      </div>
+            <button id="producto" onclick="btnProducto()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <button id="division" onclick="btnDivision()">
+                <i class="fa-solid fa-divide"></i>
+            </button>
+        </section>
+        <section class="container-operacion">
+            <span id="num1"></span>
+            <span id="operacion"></span>
+            <span id="num2"></span>
+            <span>=</span>
+            <input type="text" id="respuesta_usuario">
+            <button id="corregir" onclick="corregir()">
+                Corregir
+            </button>
+        </section>
+        <section id="msj_correcion"></section>
     </div>
-    <div id="pantalla-final">
-      <h2>CORRECTAS: <span id="numCorrectas">3</span></h2>
-      <h2>INCORRECTAS: <span id="numIncorrectas">2</span></h2>
-      <button class="btn" onclick="volverAlInicio()">VOLVER AL INICIO</button>
-    </div>
-    <footer>Desarrollado By Wilson 2024</footer>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
